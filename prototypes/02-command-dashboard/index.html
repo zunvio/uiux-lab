@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Command Dashboard — UI/UX Lab 02</title>
+<style>
+:root{--bg:#050508;--surface:#0d0d10;--elev:#141418;--text:#f4f4f5;--muted:#b6b6be;--accent:#16b8a6;--border:rgba(255,255,255,.09)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 20px 56px}
+.cmd{display:flex;gap:10px;align-items:center;background:rgba(255,255,255,.07);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:16px;padding:14px 16px}
+.cmd input{flex:1;background:transparent;border:0;color:var(--text);font-size:1rem}.cmd input::placeholder{color:var(--muted)}
+kbd{background:#26262e;border-radius:6px;padding:2px 7px;font-size:.8rem}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px}
+.tile{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:22px}
+.tile.big{grid-column:span 2;grid-row:span 2}.tile.wide{grid-column:span 2}
+.tile h2{font-size:1rem;margin:.1em 0 .4em}.tile p,.muted{color:var(--muted)}
+.num{font-size:2.2rem;font-weight:800}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.switch{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-top:1px solid var(--border)}
+.pill{width:46px;height:26px;border-radius:99px;background:var(--accent);position:relative;flex:none}.pill::after{content:"";position:absolute;inset-inline-end:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff}
+.dots{display:flex;gap:8px;margin-top:12px}.dots i{width:34px;height:34px;border-radius:10px;background:#26262e}.dots i.on{background:var(--accent)}
+@media(max-width:760px){.grid{grid-template-columns:1fr 1fr}.tile.big,.tile.wide{grid-column:span 2}}
+@media(max-width:460px){.grid{grid-template-columns:1fr}.tile.big,.tile.wide{grid-column:span 1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body><main class="wrap">
+<h1>Command Dashboard</h1><p class="muted">Every bento tile is a working control — graphical-first, no prompt needed. Glass is used once: the command bar.</p>
+<div class="cmd" role="search"><span aria-hidden="true">◆</span><input aria-label="Command" placeholder="Type a command or search…"><kbd>Ctrl K</kbd></div>
+<section class="grid" aria-label="Dashboard controls">
+<article class="tile big"><h2>Weekly throughput</h2><div class="num">1,284</div><p>+12% vs last week. Chart area rendered as geometry only.</p><div class="dots" aria-hidden="true"><i class="on"></i><i></i><i class="on"></i><i></i><i class="on"></i><i></i></div></article>
+<article class="tile"><h2>Focus level</h2><label class="muted" for="r1">Adjust directly</label><input id="r1" type="range" min="0" max="100" value="64"></article>
+<article class="tile"><h2>Alerts</h2><div class="switch"><span>Digest</span><span class="pill" role="img" aria-label="On"></span></div><div class="switch"><span>Instant</span><span class="pill" role="img" aria-label="On"></span></div></article>
+<article class="tile wide"><h2>Queue</h2><p>3 items waiting · drag handles and direct controls replace menu-diving. Prototype shows layout and states only.</p></article>
+<article class="tile"><h2>Status</h2><div class="num" style="color:var(--accent)">OK</div><p>All systems nominal</p></article>
+</section></main></body></html>
