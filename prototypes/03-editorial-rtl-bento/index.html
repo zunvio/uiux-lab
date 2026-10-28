@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>شبكة تحريرية عربية — UI/UX Lab 03</title>
+<style>
+:root{--bg:#faf6ef;--surface:#fffdf8;--ink:#1c1917;--muted:#57534e;--accent:#b45309;--border:#e7ddd0}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;line-height:1.8}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1060px;margin:0 auto;padding:44px 20px 64px}
+.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.04em}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.1rem,6vw,3.7rem);line-height:1.25;margin:.3em 0}
+.lede{color:var(--muted);max-width:60ch;font-size:1.08rem}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+.tile{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px}
+.tile.hero{grid-column:span 2;grid-row:span 2}
+.tile.wide{grid-column:span 2}
+.tile h2{font-family:Georgia,serif;font-size:1.25rem;margin:.2em 0}.tile p{color:var(--muted);margin:.3em 0}
+.check{list-style:none;padding:0;margin:10px 0}.check li{padding-inline-start:26px;position:relative}.check li::before{content:"◆";position:absolute;inset-inline-start:0;color:var(--accent)}
+.btn{display:inline-block;margin-top:14px;background:var(--ink);color:#fff;padding:11px 18px;border-radius:12px;font-weight:700;text-decoration:none}
+@media(max-width:760px){.grid{grid-template-columns:1fr 1fr}.tile.hero,.tile.wide{grid-column:span 2}}
+@media(max-width:460px){.grid{grid-template-columns:1fr}.tile.hero,.tile.wide{grid-column:span 1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body><main class="wrap">
+<p class="eyebrow">مختبر واجهات · مفهوم ٠٣</p>
+<h1>صفحة ثقة تحريرية، مصممة للعربية أولاً</h1>
+<p class="lede">خلفية كريمية وخط تحريري وشبكة بينتو تحتها — مصممة من اليمين لليسار منذ السطر الأول بخصائص CSS المنطقية، لا مقلوبة لاحقاً. محتوى فئة عام فقط: لا أسعار ولا ادعاءات منتج.</p>
+<section class="grid" aria-label="شبكة محتوى">
+<article class="tile hero"><h2>الوضوح قبل الزخرفة</h2><p>العنوان وحده يحمل الصفحة. بقية المربعات تجيب عن سؤال واحد في كل مرة.</p><ul class="check"><li>ترتيب قراءة يعمل مع قارئ الشاشة</li><li>تباين نصي لا يقل عن ٤.٥:١</li><li>حركة مخفّضة عند طلب النظام</li></ul><a class="btn" href="#">انضم إلى قائمة الانتظار</a></article>
+<article class="tile"><h2>خط تحريري</h2><p>Serif للعناوين يمنح الثقة دون أي صورة بشرية.</p></article>
+<article class="tile"><h2>عربي أصيل</h2><p>اتجاه ومسافات وهوامش منطقية، لا نسخة معكوسة.</p></article>
+<article class="tile wide"><h2>بينتو هادئ</h2><p>شبكة غير متماثلة بمحتوى عربي حقيقي الطول — تختبر كسر الأسطر والارتفاعات قبل أي إطلاق.</p></article>
+<article class="tile"><h2>لون واحد دافئ</h2><p>كهرماني للفعل فقط.</p></article>
+</section></main></body></html>
