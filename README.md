@@ -13,6 +13,7 @@ Published as open source under the MIT License (see `LICENSE`) on two hosts:
 | `prototypes/01-calm-bento-saas/` | Bento feature grid with motion/glass excess removed — one accent, reading order first |
 | `prototypes/02-command-dashboard/` | Dark-first bento dashboard where every tile is a working control; glass only on the command bar |
 | `prototypes/03-editorial-rtl-bento/` | Cream/serif editorial trust page designed Arabic RTL-first with logical CSS properties |
+| `prototypes/04-invoice-bento/` | Invoice steps as bento tiles — items, tax, total, export — with a live-updating document preview; sample figures only, concept demo |
 
 Each prototype is a single self-contained `index.html` — no build step, no external scripts, fonts or trackers. Open the file in a browser to try it.
 
